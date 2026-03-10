@@ -1,0 +1,30 @@
+import csv
+
+# หัวหน้าแผนก IT เดินมาบอกคุณว่า "ช่วยรวมยอดเงินเดือนของพนักงานแผนก IT ทั้งหมดให้หน่อยซิ ว่าเดือนนึงเราต้องจ่ายกี่บาท"
+
+# # ข้อมูลพนักงานจำลอง
+# data = [
+#     ["ชื่อ", "แผนก", "เงินเดือน"],
+#     ["สมชาย", "IT", "30000"],
+#     ["สมหญิง", "HR", "25000"],
+#     ["สมศักดิ์", "IT", "35000"]
+# ]
+
+# # สร้างไฟล์แบบ 'w' (write - เขียน)
+# with open('staff_data.csv', 'w', encoding='utf-8', newline='') as file:
+#     writer = csv.writer(file)
+#     writer.writerows(data)
+
+# print("สร้างสมุดบัญชี staff_data.csv สำเร็จ!")
+
+# อ่านไฟล์ .csv
+total_it_salary = 0
+
+with open('staff_data.csv', 'r', encoding='utf-8') as file:
+    reader = csv.reader(file)
+    next(reader)
+    for row in reader:
+        if row[1] == 'IT':
+            total_it_salary += int(row[2])
+    
+print(f"งบประมาณรวมของแผนก IT คือ {total_it_salary} บาท")

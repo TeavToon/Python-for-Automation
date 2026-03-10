@@ -1,0 +1,21 @@
+{
+    "editor.fontSize": 25,
+    "editor.wordWrap": "on",
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": "C:\\WINDOWS\\System32\\cmd.exe",
+            "args": []
+        },
+        "Git Bash": {
+            "source": "Git Bash",
+            "icon": "terminal-git-bash"
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Command Prompt"
+}
